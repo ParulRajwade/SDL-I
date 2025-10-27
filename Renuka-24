@@ -1,0 +1,58 @@
+//program to check whether the number is prime 
+package com.media;
+import java.util.Scanner;
+
+public class Prime {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int flag=0;
+        System.out.print("Enter a number: ");
+        int n= sc.nextInt();
+       
+        for (int i = 2; i*i< n; i++) {
+            if (n % i == 0) {
+                flag=1;
+            }
+            else
+            	flag=0;
+        }
+        if(n==0||n==1) {
+            System.out.print(n +" Number is Not Prime");
+          
+        }
+        else if(flag==0) {
+            System.out.print(n +" Number is Prime");
+          
+        }else
+            System.out.print(n +" Number is Not Prime");
+
+    }
+}
+
+//Fibonacci Series
+package com.media;
+import java.util.Scanner;
+
+public class Fibonacci{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter the number of Fibonacci terms to print: ");
+        int n = scanner.nextInt();
+        
+        int a = 0, b = 1;
+        System.out.print("Fibonacci Series: ");
+        
+        for (int i = 0; i < n; i++) {
+            System.out.print(a + " ");
+            
+            int next = a + b;
+            a = b;
+            b = next;
+        }
+        
+        scanner.close();
+    }
+}
+
+
