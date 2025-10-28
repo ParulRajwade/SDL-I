@@ -1,0 +1,39 @@
+//Hello World and To check whether a number is Prime or not
+import java.util.Scanner;
+
+public class PrimeCheck {
+    public static void main(String[] args) {
+
+        System.out.println("Hello, World!");
+        
+        Scanner sc = new Scanner(System.in);
+
+        // Input number
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        //To track if number is prime
+        boolean isPrime = true;
+
+        if (num <= 1) {
+            isPrime = false; // numbers <= 1 are not prime
+        } else {
+            // check divisibility up to sqrt(num)
+            for (int i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+        }
+
+        // Output result
+        if (isPrime) {
+            System.out.println(num + " is a prime number.");
+        } else {
+            System.out.println(num + " is not a prime number.");
+        }
+
+        sc.close();
+    }
+}

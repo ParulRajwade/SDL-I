@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+// Check whether the given number is prime and print Hello World
+
+public class prime {
+    public static void main(String[] args) {
+
+        System.out.println("Hello, World!");
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = scanner.nextInt();
+        scanner.close();
+
+        if (isPrime(num)) {
+            System.out.println(num + " is a prime number.");
+        } else {
+            System.out.println(num + " is not a prime number.");
+        }
+    }
+
+    public static boolean isPrime(int n) {
+        if (n <= 1 || n % 2 == 0) return false;
+        if (n == 2) return true;
+        for (int i = 3; i <= Math.sqrt(n); i += 2) {
+            if (n % i == 0) return false;
+        }
+        return true;
+    }
+}

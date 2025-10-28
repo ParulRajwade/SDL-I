@@ -1,0 +1,58 @@
+package hello;
+
+import java.util.Scanner; // Import Scanner class
+
+public class Prime {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Take input from user
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+
+        int i, m = 0, flag = 0;
+        m = n / 2; // no need to check beyond half
+
+        if (n == 0 || n == 1) {
+            System.out.println(n + " is not prime");
+        } else {
+            for (i = 2; i <= m; i++) {
+                if (n % i == 0) {   // divisible by i → not prime
+                    System.out.println(n + " is not prime");
+                    flag = 1;
+                    break;
+                }
+            }
+            if (flag == 0) {
+                System.out.println(n + " is prime");
+            }
+        }
+
+        sc.close();
+    }
+}
+
+
+
+
+package hello;
+import java.util.Scanner;
+
+public class fibonacci {
+
+	public static void main(String[] args) {
+
+		       int n1=0,n2=1,n3,i,count=10;
+		       System.out.println(n1+""+n2);
+		       for(i=2;i<count;++i)
+		       {
+		    	   n3=n1+n2;
+		    	   System.out.println(""+n3);
+		    	   n1=n2;
+		    	   n2=n3;
+		       }
+		       }
+		       }
+	
+
+
